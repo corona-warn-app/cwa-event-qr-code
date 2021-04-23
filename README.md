@@ -24,6 +24,8 @@
 
 Utility to generate QR codes for Event Registration (incl. from the CLI) For information about the project, please see our [documentation repository](https://github.com/corona-warn-app/cwa-documentation).
 
+Remark: This utility is in early stages of development and should help you to create multiple qr codes at once. If you find this useful or you identified a bug, feel free to create an issue.
+
 ## Development
 
 ### Requirements

@@ -1,0 +1,9 @@
+#!/usr/bin/env node
+/* eslint-disable no-unused-expressions */
+
+const yargs = require('yargs')
+
+yargs
+  .command(require('./../lib/yargs/commands/file')())
+  .command(require('./../lib/yargs/commands/terminal')())
+  .argv

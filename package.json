@@ -1,0 +1,62 @@
+{
+  "name": "cwa-event-qr-code",
+  "version": "1.0.0",
+  "description": "Utility to generate QR codes for Event Registration (incl. from the CLI)",
+  "main": "lib/index.js",
+  "bin": {
+    "cwa-event-qr-code": "bin/cli"
+  },
+  "scripts": {
+    "fix": "standard bin/cli 'lib/**/*.js' --fix --verbose | snazzy",
+    "lint": "standard bin/cli 'lib/**/*.js' --verbose | snazzy",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/corona-warn-app/cwa-event-qr-code.git"
+  },
+  "keywords": [
+    "cwa",
+    "corona-warn-app",
+    "event registration"
+  ],
+  "author": "SAP SE",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/corona-warn-app/cwa-event-qr-code/issues"
+  },
+  "homepage": "https://github.com/corona-warn-app/cwa-event-qr-code#readme",
+  "dependencies": {
+    "protobufjs": "6.10.2",
+    "qrcode": "1.4.4",
+    "yargs": "16.2.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "12.1.1",
+    "@commitlint/config-conventional": "12.1.1",
+    "husky": "6.0.0",
+    "lint-staged": "10.5.4",
+    "snazzy": "9.0.0",
+    "standard": "16.0.3"
+  },
+  "engines": {
+    "node": ">=15"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "standard --fix",
+      "git add"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  }
+}

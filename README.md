@@ -36,7 +36,7 @@ Clone the repository and ensure to have all requirements installed. To build the
 
 ```bash
 npm install
-
+npm link
 ```
 
 To test the generated content, simply execute the command

@@ -26,62 +26,54 @@ Utility to generate QR codes for Event Registration (incl. from the CLI) For inf
 
 Remark: This utility is in early stages of development and should help you to create multiple qr codes at once. If you find this useful or you identified a bug, feel free to create an issue.
 
-## Development
+## Requirements
 
-### Requirements
-
-You need the LTS version of [Node.js](https://nodejs.org/en/) (which includes npm) to build the website. Optionally, you need an HTTP Server such as [http-server](https://github.com/http-party/http-server) to run and test the deployment of the website locally.
-
-### Getting started
-
-Clone the repository and ensure to have all requirements installed. To build the qr-code generator, switch to the `cwa-event-qr-code` base directory and execute the commands
-
-```bash
-npm install
-npm link
-```
+You need version 15 or higher of [Node.js](https://nodejs.org/en/) (which includes npm) to use this utility.
 
 To test the generated content, simply execute the command
 
 ## CLI Usage
 
 ```shell
-# Print QR code to the terminal
-$ cwa-event-qr-code \
-  --description hello-world \
-  --address hello \
-  --type 1 \
-  --default-check-in-length-in-minutes 30
+# Install globally to make executable available
+$ npm install --global
+
+# Help
+$ cwa-event-qr-code --help
 
 # Write QR code to file
-$ cwa-event-qr-code \
+$ cwa-event-qr-code file \
   --description hello-world \
   --address hello \
   --type 1 \
   --default-check-in-length-in-minutes 30 \
   --filepath hello-world.png #.svg also works
+
+# Print QR code to the terminal
+$ cwa-event-qr-code terminal \
+  --description hello-world \
+  --address hello \
+  --type 1 \
+  --default-check-in-length-in-minutes 30
+
+# Alternatively, you can skip the global installation by using npx
+$ npx cwa-event-qr-code --help
 ```
 
 ## Usage in Node.js
 
+Install as a dependency:
+
+```shell
+$ npm install cwa-event-qr-code
+```
+
+Then use it in your script:
+
 ```javascript
-const cwa = require('cwa-event-qr-code')
+const { createEventQRCode } = require('cwa-event-qr-code')
 
-// Create a PNG
-await cwa.createQRCodeAsPNG({
-  locationData: {
-    description: 'hello-world',
-    address: 'hello'
-  },
-  vendorData: {
-    type: 1,
-    defaultCheckInLengthInMinutes: 30
-  },
-  filepath: 'hello-world.png'
-})
-
-// Create just the url
-const url = await cwa.generateQRCodeContent({
+const eventQRCode = createEventQRCode({
   locationData: {
     description: 'hello-world',
     address: 'hello'
@@ -91,7 +83,12 @@ const url = await cwa.generateQRCodeContent({
     defaultCheckInLengthInMinutes: 30
   }
 })
-// then proceed to create your own QR code with it...
+
+// Create a PNG
+await eventQRCode.toPNG('hello-world.png')
+
+// Get just the url
+const url = await eventQRCode.toURL()
 ```
 
 ## Documentation

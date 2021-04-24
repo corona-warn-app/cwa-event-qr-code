@@ -9,7 +9,8 @@
   "scripts": {
     "fix": "standard bin/cli 'lib/**/*.js' --fix --verbose | snazzy",
     "lint": "standard bin/cli 'lib/**/*.js' --verbose | snazzy",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -42,16 +43,9 @@
   "engines": {
     "node": ">=15"
   },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
     "*.js": [
-      "standard --fix",
-      "git add"
+      "standard --fix"
     ]
   },
   "commitlint": {

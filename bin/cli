@@ -5,6 +5,7 @@ const yargs = require('yargs')
 
 yargs
   .command(require('../lib/yargs/commands/file')())
+  .command(require('./../lib/yargs/commands/poster')())
   .command(require('../lib/yargs/commands/terminal')())
   .middleware([
     require('../lib/yargs/middlewares/trace-locations-from-csv')(),

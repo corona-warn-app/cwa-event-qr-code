@@ -10,6 +10,11 @@ corona-warn-app.opensource@sap.com
 
 Components:
 -----------
+Component: pdf-lib
+Licensor:  Andrew Dillon and other contributors
+Website:   https://github.com/Hopding/pdf-lib
+License:   MIT License
+
 Component: protobufjs
 Licensor:  Google Inc. and other contributors
 Website:   https://github.com/protobufjs/protobuf.js

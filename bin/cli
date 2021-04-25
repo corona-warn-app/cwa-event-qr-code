@@ -4,6 +4,12 @@
 const yargs = require('yargs')
 
 yargs
-  .command(require('./../lib/yargs/commands/file')())
-  .command(require('./../lib/yargs/commands/terminal')())
+  .command(require('../lib/yargs/commands/file')())
+  .command(require('../lib/yargs/commands/terminal')())
+  .middleware([
+    require('../lib/yargs/middlewares/trace-locations-from-csv')(),
+    require('../lib/yargs/middlewares/trace-locations-from-argv')(),
+    require('../lib/yargs/middlewares/trace-locations-provider')()
+  ])
+  .showHelpOnFail(true)
   .argv

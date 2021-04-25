@@ -10,6 +10,11 @@ corona-warn-app.opensource@sap.com
 
 Components:
 -----------
+Component: @fast-csv/parse
+Licensor:  C2FO and other contributors
+Website:   https://github.com/C2FO/fast-csv
+License:   MIT License
+
 Component: pdf-lib
 Licensor:  Andrew Dillon and other contributors
 Website:   https://github.com/Hopding/pdf-lib

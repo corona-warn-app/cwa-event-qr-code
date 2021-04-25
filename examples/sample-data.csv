@@ -1,0 +1,3 @@
+﻿description;address;startDate;endDate;type;defaultCheckInLengthInMinutes;filepath
+Some Bakery;Some Street, Some City;;;4;15;some-bakery.pdf
+Birthday Party;My place, outside of course;2021-04-25T15:00;2021-04-25T20:00;11;;birthday-party.pdf

@@ -34,38 +34,56 @@ To test the generated content, simply execute the command
 
 ## CLI Usage
 
+#### Installation and Basics
+
 ```shell
-# Install globally to make executable available
-$ npm install --global
-
-# Help
+# Option a) Install globally to make executable available
+$ npm install cwa-event-qr-code --global
 $ cwa-event-qr-code --help
+$ cwa-event-qr-code --version
 
-# Write QR code to file
-$ cwa-event-qr-code file \
-  --description hello-world \
-  --address hello \
-  --type 1 \
-  --default-check-in-length-in-minutes 30 \
-  --filepath hello-world.png #.svg also works
-
-# Print QR code to the terminal
-$ cwa-event-qr-code terminal \
-  --description hello-world \
-  --address hello \
-  --type 1 \
-  --default-check-in-length-in-minutes 30
-
-# Create poster
-$ cwa-event-qr-code poster \
-  --description hello-world \
-  --address hello \
-  --type 1 \
-  --default-check-in-length-in-minutes 30 \
-  --filepath hello-world.pdf
-
-# Alternatively, you can skip the global installation by using npx
+# Option b) Use npx and skip the installation
 $ npx cwa-event-qr-code --help
+$ npx cwa-event-qr-code --version
+```
+
+#### Create Posters
+
+```shell
+# Multiple posters from CSV
+$ cwa-event-qr-code poster \
+  --csv examples/sample-data.csv \
+  --dest posters
+
+# Single poster from arguments
+$ cwa-event-qr-code poster \
+  --description "Some Bakery" \
+  --address "Some Street, Some City" \
+  --type 4 \
+  --filepath bakery.pdf
+```
+
+#### Create QR codes only
+
+```shell
+# Multiple QR codes from CSV
+$ cwa-event-qr-code file \
+  --csv examples/sample-data.csv \
+  --dest qr-codes
+
+# Single QR code from arguments (as PNG)
+$ cwa-event-qr-code poster \
+  --description "Some Bakery" \
+  --address "Some Street, Some City" \
+  --type 4 \
+  --filepath bakery.png
+
+# Single QR code from arguments (as SVG)
+$ cwa-event-qr-code poster \
+  --description "Some Bakery" \
+  --address "Some Street, Some City" \
+  --type 4 \
+  --filepath bakery.svg
 ```
 
 ## Usage in Node.js

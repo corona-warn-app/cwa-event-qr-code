@@ -28,6 +28,7 @@
   },
   "homepage": "https://github.com/corona-warn-app/cwa-event-qr-code#readme",
   "dependencies": {
+    "pdf-lib": "1.16.0",
     "protobufjs": "6.10.2",
     "qrcode": "1.4.4",
     "yargs": "16.2.0"

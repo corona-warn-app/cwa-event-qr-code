@@ -56,6 +56,14 @@ $ cwa-event-qr-code terminal \
   --type 1 \
   --default-check-in-length-in-minutes 30
 
+# Create poster
+$ cwa-event-qr-code poster \
+  --description hello-world \
+  --address hello \
+  --type 1 \
+  --default-check-in-length-in-minutes 30 \
+  --filepath hello-world.pdf
+
 # Alternatively, you can skip the global installation by using npx
 $ npx cwa-event-qr-code --help
 ```

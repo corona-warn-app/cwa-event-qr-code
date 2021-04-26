@@ -2,9 +2,21 @@
 /* eslint-disable no-unused-expressions */
 
 const yargs = require('yargs')
+const middlewares = require('../lib/yargs/middlewares/index')
+
+const dataProviderMiddleware = middlewares.dataProvider({
+  sources: [
+    middlewares.dataFromCSV(),
+    middlewares.dataFromArgv()
+  ]
+})
 
 yargs
-  .command(require('./../lib/yargs/commands/file')())
-  .command(require('./../lib/yargs/commands/poster')())
-  .command(require('./../lib/yargs/commands/terminal')())
+  .middleware([
+    dataProviderMiddleware
+  ])
+  .command(require('../lib/yargs/commands/file')({ dataProvider: dataProviderMiddleware }))
+  .command(require('../lib/yargs/commands/poster')({ dataProvider: dataProviderMiddleware }))
+  .command(require('../lib/yargs/commands/terminal')({ dataProvider: dataProviderMiddleware }))
+  .showHelpOnFail(true)
   .argv

@@ -7,8 +7,8 @@
     "cwa-event-qr-code": "bin/cli"
   },
   "scripts": {
-    "fix": "standard bin/cli 'lib/**/*.js' --fix --verbose | snazzy",
-    "lint": "standard bin/cli 'lib/**/*.js' --verbose | snazzy",
+    "fix": "standard bin/cli 'lib/**/*.js' 'test/**/*.js' --fix --verbose | snazzy",
+    "lint": "standard bin/cli 'lib/**/*.js' 'test/**/*.js' --verbose | snazzy",
     "prepare": "husky install",
     "test": "jest",
     "watch": "jest --watch"

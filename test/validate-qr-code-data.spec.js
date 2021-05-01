@@ -39,7 +39,7 @@ expect.extend({
   }
 })
 
-const validateQRCodeData = require('../lib/validate-qr-code-data')
+const { validateQRCodeData } = require('../lib/index')
 
 const generateRandomStringWithLength = length => Array.from(Array(length), () => 'a').join('')
 

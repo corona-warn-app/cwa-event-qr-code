@@ -60,6 +60,7 @@ $ cwa-event-qr-code poster \
   --description "Some Bakery" \
   --address "Some Street, Some City" \
   --type 4 \
+  --default-check-in-length-in-minutes 15 \
   --filepath bakery.pdf
 ```
 

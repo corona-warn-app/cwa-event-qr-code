@@ -1,7 +1,10 @@
-name: PR Validation
+name: Node.js CI
 
 on:
+  push:
+    branches: [ main ]
   pull_request:
+    branches: [ main ]
 
 jobs:
   build:

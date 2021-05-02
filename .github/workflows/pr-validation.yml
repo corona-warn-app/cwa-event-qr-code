@@ -1,0 +1,15 @@
+name: PR Validation
+
+on:
+  pull_request:
+
+jobs:
+  build_and_verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Build and verify
+        run: |
+          npm install
+          npm test

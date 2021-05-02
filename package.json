@@ -10,7 +10,7 @@
     "fix": "standard bin/cli 'lib/**/*.js' 'test/**/*.js' --fix --verbose | snazzy",
     "lint": "standard bin/cli 'lib/**/*.js' 'test/**/*.js' --verbose | snazzy",
     "prepare": "husky install",
-    "test": "jest",
+    "test": "npm run lint && jest",
     "watch": "jest --watch"
   },
   "repository": {

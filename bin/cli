@@ -2,4 +2,4 @@
 /* eslint-disable no-unused-expressions */
 
 const parser = require('./../lib/yargs/index')
-parser().argv
+parser({ process, console }).argv

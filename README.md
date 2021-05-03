@@ -73,17 +73,19 @@ $ cwa-event-qr-code file \
   --dest qr-codes
 
 # Single QR code from arguments (as PNG)
-$ cwa-event-qr-code poster \
+$ cwa-event-qr-code file \
   --description "Some Bakery" \
   --address "Some Street, Some City" \
   --type 4 \
+  --default-check-in-length-in-minutes 15 \
   --filepath bakery.png
 
 # Single QR code from arguments (as SVG)
-$ cwa-event-qr-code poster \
+$ cwa-event-qr-code file \
   --description "Some Bakery" \
   --address "Some Street, Some City" \
   --type 4 \
+  --default-check-in-length-in-minutes 15 \
   --filepath bakery.svg
 ```
 

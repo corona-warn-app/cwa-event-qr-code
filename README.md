@@ -9,7 +9,9 @@
 </p>
 <p align="center">
     <a href="#about-this-repository">About this Repository</a> •
-    <a href="#development">Development</a> •
+    <a href="#requirements">Requirements</a> •
+    <a href="#cli-usage">CLI Usage</a> •
+    <a href="#usage-in-nodejs">Usage in Node.js</a> •
     <a href="#documentation">Documentation</a> •
     <a href="#support-and-feedback">Support and Feedback</a> •
     <a href="#how-to-contribute">How to contribute</a> •

@@ -5,11 +5,13 @@
 <hr />
 
 <p align="center">
-    <a href="https://observatory.mozilla.org/analyze/coronawarn.app" title="Latest Results"><img src="https://img.shields.io/mozilla-observatory/grade/coronawarn.app" alt="Mozilla HTTP Observatory Grade"></a>
+    <a href="https://github.com/corona-warn-app/cwa-event-qr-code/actions/workflows/build.yml" title="Latest Results"><img src="https://img.shields.io/github/workflow/status/corona-warn-app/cwa-event-qr-code/Node.js%20CI/main" alt="Build Status" /></a>
 </p>
 <p align="center">
     <a href="#about-this-repository">About this Repository</a> •
-    <a href="#development">Development</a> •
+    <a href="#requirements">Requirements</a> •
+    <a href="#cli-usage">CLI Usage</a> •
+    <a href="#usage-in-nodejs">Usage in Node.js</a> •
     <a href="#documentation">Documentation</a> •
     <a href="#support-and-feedback">Support and Feedback</a> •
     <a href="#how-to-contribute">How to contribute</a> •
@@ -22,15 +24,13 @@
 
 ## About this Repository
 
-Utility to generate QR codes for Event Registration (incl. from the CLI) For information about the project, please see our [documentation repository](https://github.com/corona-warn-app/cwa-documentation).
+Utility to generate QR codes for Event Registration (incl. from the CLI). For information about the project, please see our [documentation repository](https://github.com/corona-warn-app/cwa-documentation).
 
-Remark: This utility is in early stages of development and should help you to create multiple qr codes at once. If you find this useful or you identified a bug, feel free to create an issue.
+Remark: This utility is in early stages of development and should help you to create multiple QR codes at once. If you find this useful or you identified a bug, feel free to create an issue.
 
 ## Requirements
 
 You need version 15 or higher of [Node.js](https://nodejs.org/en/) (which includes npm) to use this utility.
-
-To test the generated content, simply execute the command
 
 ## CLI Usage
 
@@ -73,17 +73,19 @@ $ cwa-event-qr-code file \
   --dest qr-codes
 
 # Single QR code from arguments (as PNG)
-$ cwa-event-qr-code poster \
+$ cwa-event-qr-code file \
   --description "Some Bakery" \
   --address "Some Street, Some City" \
   --type 4 \
+  --default-check-in-length-in-minutes 15 \
   --filepath bakery.png
 
 # Single QR code from arguments (as SVG)
-$ cwa-event-qr-code poster \
+$ cwa-event-qr-code file \
   --description "Some Bakery" \
   --address "Some Street, Some City" \
   --type 4 \
+  --default-check-in-length-in-minutes 15 \
   --filepath bakery.svg
 ```
 

@@ -47,6 +47,7 @@ const run = async ({ process, console, argv }) => new Promise((resolve, reject) 
 
 describe('cwa-event-qr-code', () => {
   jest.setTimeout(15000)
+  jest.retryTimes(3)
 
   const FIXTURE_JPG = 'test.jpg'
   const FIXTURE_PDF = 'test.pdf'

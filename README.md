@@ -24,15 +24,13 @@
 
 ## About this Repository
 
-Utility to generate QR codes for Event Registration (incl. from the CLI) For information about the project, please see our [documentation repository](https://github.com/corona-warn-app/cwa-documentation).
+Utility to generate QR codes for Event Registration (incl. from the CLI). For information about the project, please see our [documentation repository](https://github.com/corona-warn-app/cwa-documentation).
 
-Remark: This utility is in early stages of development and should help you to create multiple qr codes at once. If you find this useful or you identified a bug, feel free to create an issue.
+Remark: This utility is in early stages of development and should help you to create multiple QR codes at once. If you find this useful or you identified a bug, feel free to create an issue.
 
 ## Requirements
 
 You need version 15 or higher of [Node.js](https://nodejs.org/en/) (which includes npm) to use this utility.
-
-To test the generated content, simply execute the command
 
 ## CLI Usage
 

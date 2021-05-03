@@ -5,7 +5,7 @@
 <hr />
 
 <p align="center">
-    <a href="https://observatory.mozilla.org/analyze/coronawarn.app" title="Latest Results"><img src="https://img.shields.io/mozilla-observatory/grade/coronawarn.app" alt="Mozilla HTTP Observatory Grade"></a>
+    <a href="https://github.com/corona-warn-app/cwa-event-qr-code/actions/workflows/build.yml" title="Latest Results"><img src="https://img.shields.io/github/workflow/status/corona-warn-app/cwa-event-qr-code/Node.js%20CI/main" alt="Build Status" /></a>
 </p>
 <p align="center">
     <a href="#about-this-repository">About this Repository</a> •

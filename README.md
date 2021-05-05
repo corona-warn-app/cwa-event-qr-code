@@ -30,7 +30,7 @@ Remark: This utility is in early stages of development and should help you to cr
 
 ## Requirements
 
-You need version 15 or higher of [Node.js](https://nodejs.org/en/) (which includes npm) to use this utility.
+You need version 14 (LTS) or higher of [Node.js](https://nodejs.org/en/) (which includes npm) to use this utility.
 
 ## CLI Usage
 

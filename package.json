@@ -46,7 +46,7 @@
     "standard": "16.0.3"
   },
   "engines": {
-    "node": ">=15"
+    "node": ">=14"
   },
   "lint-staged": {
     "*.js": [

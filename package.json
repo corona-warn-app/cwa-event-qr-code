@@ -1,6 +1,6 @@
 {
   "name": "cwa-event-qr-code",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Utility to generate QR codes for Event Registration (incl. from the CLI)",
   "main": "lib/index.js",
   "bin": {

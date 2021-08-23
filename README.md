@@ -32,6 +32,10 @@ Remark: This utility is in early stages of development and should help you to cr
 
 You need version 14 (LTS) or higher of [Node.js](https://nodejs.org/en/) (which includes npm) to use this utility.
 
+## Usage Guide
+
+A step by step explanation on how to use this tool is available [here](https://coronawarn.app/en/event-qr-code-guide/), on our website.
+
 ## CLI Usage
 
 #### Installation and Basics

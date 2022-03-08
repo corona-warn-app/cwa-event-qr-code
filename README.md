@@ -124,6 +124,18 @@ await eventQRCode.toPNG('hello-world.png')
 const url = await eventQRCode.toURL()
 ```
 
+### Debug local changes
+
+```shell
+# Run the CLI-Tool locally
+$ node bin/cli file \
+  --description "Some Bakery" \
+  --address "Some Street, Some City" \
+  --type 4 \
+  --default-check-in-length-in-minutes 15 \
+  --filepath bakery.png
+```
+
 ## Documentation
 
 The full documentation for the Corona-Warn-App can be found in the [cwa-documentation](https://github.com/corona-warn-app/cwa-documentation) repository. The documentation repository contains technical documents, architecture information, and white papers related to this implementation.

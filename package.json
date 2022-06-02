@@ -32,7 +32,7 @@
   "dependencies": {
     "@fast-csv/parse": "4.3.6",
     "pdf-lib": "1.16.0",
-    "protobufjs": "6.10.2",
+    "protobufjs": "6.11.3",
     "qrcode": "1.4.4",
     "yargs": "16.2.0"
   },
